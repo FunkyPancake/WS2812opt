@@ -1,0 +1,2 @@
+ws2812_if.c:14:6:WS2812_Cfg	8	static
+ws2812_if.c:22:6:WS2812_Main	16	static

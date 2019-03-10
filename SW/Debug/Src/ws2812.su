@@ -1,0 +1,7 @@
+stm32f0xx_ll_hal_dma.h:599:22:LL_DMA_EnableChannel	16	static
+stm32f0xx_ll_hal_dma.h:618:22:LL_DMA_DisableChannel	16	static
+ws2812.c:13:6:WS2812_DmaHandler	8	static
+ws2812.c:32:6:WS2812_SetBr	32	static
+ws2812.c:42:6:WS2812_SetUniColor	32	static
+ws2812.c:56:8:WS2812_SendData	16	static
+ws2812.c:81:6:WS2812_Init	40	static

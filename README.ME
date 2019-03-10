@@ -1,0 +1,18 @@
+# WS2812opt
+STM32 Driver for WS2812 that uses 1bit for bit instead of pupular 1byte for bit
+
+## Description
+Driver uses DMA, SPI and Timer periphials to asynchronously transmit data to a string of leds.
+Drivers needs additional hardware.
+![alt text](https://raw.githubusercontent.com/FunkyPancake/WS2812opt/master/res/sch.png)
+
+Adding more AND gates and GATE[x] signals allows driving multiple strings with single DMA channel.
+
+Timer_0 -> waveform coresponding to logical 0 -> 1.25us period, 0.7us high time
+Timer_1 -> waveform coresponding to logical 1 -> 1.25 period, 0.35 high time
+Timer_2 -> Used as SPI clock -> 1.25us period, 50% duty
+
+SPI works as a slave, with clock gating (there are a lot of issues with STM's hardware CS signal)
+
+### Bugs
+At startup first led ligths green -> investigation needed.
